@@ -44,111 +44,6 @@
         overflow-x: hidden;
       }
 
-      /* ---- NAV ---- */
-      nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 22px clamp(24px, 5vw, 80px);
-        background: rgba(247, 243, 238, 0.88);
-        backdrop-filter: blur(14px);
-        border-bottom: 1px solid rgba(26, 58, 46, 0.08);
-        animation: fadeDown 0.8s ease both;
-      }
-      .nav-logo {
-        font-family: "Playfair Display", serif;
-        font-size: 20px;
-        font-weight: 700;
-        color: var(--green);
-        letter-spacing: -0.3px;
-      }
-      .nav-logo span {
-        color: var(--accent);
-      }
-      .nav-links {
-        display: flex;
-        gap: 32px;
-        list-style: none;
-      }
-      .nav-links a {
-        color: var(--text-muted);
-        font-size: 14px;
-        font-weight: 400;
-        text-decoration: none;
-        letter-spacing: 0.3px;
-        transition: color 0.2s;
-      }
-      .nav-links a:hover {
-        color: var(--green);
-      }
-      .nav-cta {
-        background: var(--green) !important;
-        color: var(--cream) !important;
-        padding: 10px 22px;
-        border-radius: 40px;
-        font-weight: 500 !important;
-        transition:
-          background 0.2s !important,
-          transform 0.15s !important;
-      }
-      .nav-cta:hover {
-        background: var(--green-mid) !important;
-        transform: translateY(-1px);
-      }
-      .nav-hamburger {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-        padding: 4px;
-      }
-      .nav-hamburger span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background: var(--green);
-        border-radius: 2px;
-        transition: all 0.3s;
-      }
-      .mobile-menu {
-        display: none;
-        position: fixed;
-        top: 65px;
-        left: 0;
-        right: 0;
-        background: var(--cream);
-        border-bottom: 1px solid rgba(26, 58, 46, 0.1);
-        padding: 20px clamp(24px, 5vw, 80px);
-        z-index: 99;
-        flex-direction: column;
-        gap: 16px;
-      }
-      .mobile-menu.open {
-        display: flex;
-      }
-      .mobile-menu a {
-        color: var(--text-muted);
-        font-size: 16px;
-        text-decoration: none;
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(26, 58, 46, 0.06);
-      }
-      .mobile-menu .nav-cta-mobile {
-        display: inline-block;
-        text-align: center;
-        background: var(--green);
-        color: var(--cream) !important;
-        padding: 14px 24px;
-        border-radius: 40px;
-        font-weight: 500;
-        margin-top: 8px;
-      }
-
       /* ---- HERO ---- */
       .hero {
         min-height: 100vh;
@@ -157,7 +52,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 140px clamp(24px, 8vw, 160px) 80px;
+        padding: 60px clamp(24px, 8vw, 160px) 80px;
         position: relative;
         overflow: hidden;
       }
@@ -1188,28 +1083,6 @@
     </style>
   </head>
   <body>
-    <!-- NAV -->
-    <nav>
-      <div class="nav-logo">Senior<span>App</span></div>
-      <ul class="nav-links">
-        <li><a href="#jak-to-funguje">Jak to funguje</a></li>
-        <li><a href="#bezpeci">Bezpečí</a></li>
-        <li><a href="#cenik">Ceník</a></li>
-        <li><a href="#pilot" class="nav-cta">Zaregistrovat zájem</a></li>
-      </ul>
-      <div class="nav-hamburger" onclick="toggleMenu()" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </nav>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#jak-to-funguje" onclick="closeMenu()">Jak to funguje</a>
-      <a href="#bezpeci" onclick="closeMenu()">Bezpečí</a>
-      <a href="#cenik" onclick="closeMenu()">Ceník</a>
-      <a href="#pilot" class="nav-cta-mobile" onclick="closeMenu()"
-        >Zaregistrovat zájem</a
-      >
-    </div>
-
     <!-- HERO -->
     <section class="hero">
       <div class="hero-bg-blob"></div>
